@@ -1,0 +1,53 @@
+###
+POST http://localhost:4000/api/pacientes HTTP/1.1
+Content-Type: application/json
+
+
+{
+  "nhc": "500343894839",
+  "codigo": "A-342",
+  "apellidoPaterno": "F",
+  "apellidoMaterno": "Madrigal",
+  "nombres": "Ana",
+  "edad": 34,
+  "sexo": "F",
+  "lugarNacimiento": "Cochabamba",
+  "fechaNacimiento": "2002-11-09",
+  "ocupacion": "estudiante",
+  "direccion": "calle 123",
+  "celular": "78765432"
+}
+
+###
+GET http://localhost:4000/api/pacientes HTTP/1.1
+
+###
+GET http://localhost:4000/api/pacientes/6358d4b7e53f054af11ec5bf HTTP/1.1
+
+###
+PUT http://localhost:4000/api/pacientes/636b49aedf53d17e54de9b7f HTTP/1.1
+Content-Type: application/json
+
+{
+    "nhc": "100343894839",
+  "codigo": "A-342",
+  "apellidoPaterno": "Perez",
+  "apellidoMaterno": "Perez",
+  "nombres": "Pepe",
+  "edad": 26,
+  "sexo": "F",
+  "lugarNacimiento": "Cochabamba",
+  "fechaNacimiento": "2002-11-09T00:00:00.000Z",
+  "ocupacion": "estudiante",
+  "direccion": "calle 123",
+  "celular": "78765432",
+  "fechaCreacion": "2022-11-09T06:33:10.275Z",
+  "__v": 0,
+  "antecedentesPatologicosPersonales": [],
+  "habitos": [],
+  "higieneDental": [],
+  "respirador": []
+}
+
+###
+DELETE http://localhost:4000/api/pacientes/6358d539e53f054af11ec5ca HTTP/1.1

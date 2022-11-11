@@ -34,17 +34,25 @@ exports.obtenerPacientes = async (req, res) => {
 exports.actualizarPaciente = async (req, res) => {
 
     try {
-        const { nombre, apellido, correo, edad } = req.body;
+        const { nhc, codigo, apellidoPaterno, apellidoMaterno, nombres, edad, sexo, lugarNacimiento, fechaNacimiento, ocupacion, direccion, celular } = req.body;
         let paciente = await Paciente.findById(req.params.id);
 
         if(!paciente) {
             res.status(404).json({ msg: 'No existe el paciente' })
         }
 
-        paciente.nombre = nombre;
-        paciente.apellido = apellido;
-        paciente.correo = correo;
+        paciente.nhc = nhc;
+        paciente.codigo = codigo;
+        paciente.apellidoPaterno = apellidoPaterno;
+        paciente.apellidoMaterno = apellidoMaterno;
+        paciente.nombres = nombres;
         paciente.edad = edad;
+        paciente.sexo = sexo;
+        paciente.lugarNacimiento = lugarNacimiento;
+        paciente.fechaNacimiento = fechaNacimiento;
+        paciente.ocupacion = ocupacion;
+        paciente.direccion = direccion;
+        paciente.celular = celular;
 
         paciente = await Paciente.findOneAndUpdate({ _id: req.params.id },paciente, { new: true} )
         res.json(paciente);

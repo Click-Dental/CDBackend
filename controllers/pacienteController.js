@@ -34,7 +34,15 @@ exports.obtenerPacientes = async (req, res) => {
 exports.actualizarPaciente = async (req, res) => {
 
     try {
-        const { nhc, codigo, apellidoPaterno, apellidoMaterno, nombres, edad, sexo, lugarNacimiento, fechaNacimiento, ocupacion, direccion, celular } = req.body;
+        const { nhc, codigo, apellidoPaterno, 
+            apellidoMaterno, nombres, edad, sexo, 
+            lugarNacimiento, fechaNacimiento, 
+            ocupacion, direccion, celular, antecedentesPatologicosFamiliares,
+            antecedentesPatologicosPersonales, atm, ganglioslinfaticos, respirador,
+            otrosExamenExtraOral, labios, lengua, paladar, pisoDeLaBoca, mucosaYugal,
+            encias, fechaUltimaVisita, habitos, protesis, cepillo, hilo, enjuague,
+            frecuenciaCepillado, sangreEncias, higieneDental, problemaTratamiento, observaciones,
+            motivoConsulta, examenClinico, diagnostico} = req.body;
         let paciente = await Paciente.findById(req.params.id);
 
         if(!paciente) {
@@ -53,6 +61,37 @@ exports.actualizarPaciente = async (req, res) => {
         paciente.ocupacion = ocupacion;
         paciente.direccion = direccion;
         paciente.celular = celular;
+
+        paciente.antecedentesPatologicosFamiliares = antecedentesPatologicosFamiliares;
+        paciente.antecedentesPatologicosPersonales = antecedentesPatologicosPersonales;
+        paciente.atm = atm;
+        paciente.ganglioslinfaticos = ganglioslinfaticos;
+        paciente.respirador = respirador;
+        paciente.otrosExamenExtraOral = otrosExamenExtraOral;
+        
+        paciente.labios = labios;
+        paciente.lengua = lengua;
+        paciente.paladar = paladar;
+        paciente.pisoDeLaBoca = pisoDeLaBoca;
+        paciente.mucosaYugal = mucosaYugal;
+        paciente.encias = encias;
+
+        paciente.fechaUltimaVisita = fechaUltimaVisita;
+        paciente.habitos = habitos;
+        paciente.protesis = protesis;
+
+        paciente.cepillo = cepillo;
+        paciente.hilo = hilo;
+        paciente.enjuague = enjuague;
+        paciente.frecuenciaCepillado = frecuenciaCepillado;
+        paciente.sangreEncias = sangreEncias;
+        paciente.higieneDental = higieneDental;
+        paciente.problemaTratamiento = problemaTratamiento;
+
+        paciente.observaciones = observaciones;
+        paciente.motivoConsulta = motivoConsulta;
+        paciente.examenClinico = examenClinico;
+        paciente.diagnostico = diagnostico;
 
         paciente = await Paciente.findOneAndUpdate({ _id: req.params.id },paciente, { new: true} )
         res.json(paciente);

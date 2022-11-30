@@ -81,3 +81,22 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:4000/api/pacientes/6358d539e53f054af11ec5ca HTTP/1.1
+
+
+###
+POST http://localhost:4000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "Katherin@gmail.com",
+  "password": "123abc"
+}
+
+###
+POST http://localhost:4000/api/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "Katherin@gmail.com",
+  "password": "123abc"
+}

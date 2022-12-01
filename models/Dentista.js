@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const DentistaSchema = mongoose.Schema({
-    //datos personales
     nombre: {
         type: String,
         required: true

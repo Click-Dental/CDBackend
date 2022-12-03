@@ -56,117 +56,117 @@ const PacienteSchema = mongoose.Schema({
     },
     // antecedentes Patologicos Familiares
     antecedentesPatologicosFamiliares: {  
-        type: String,
-        required: false
+        type: String
+        // required: true
     },
     // antecedentes Patologicos Personales
     antecedentesPatologicosPersonales: {  
-        type: Array,
-        required: false
+        type: String
+        // required: true
     },
      // examen extra oral
     atm: {  
         type: String,
-        required: false
+        // required: true
     },
     ganglioslinfaticos: {  
         type: String,
-        required: false
+        // required: true
     },
     respirador: {  
-        type: Array,
-        required: false
+        type: String,
+        // required: true
     },
     otrosExamenExtraOral: {  
         type: String,
-        required: false
+        // required: true
     },
      // examen intra oral
     labios: {  
         type: String,
-        required: false
+        // required: true
     },
     lengua: {  
         type: String,
-        required: false
+        // required: true
     },
     paladar: {  
         type: String,
-        required: false
+        // required: true
     },
     pisoDeLaBoca: {  
         type: String,
-        required: false
+        // required: true
     },
     mucosaYugal: {  
         type: String,
-        required: false
+        // required: true
     },
     encias: {  
         type: String,
-        required: false
+        // required: true
     },
     // antecedentes bucodentales
     fechaUltimaVisita: {  
         type: Date,
-        required: false
+        // required: true
     },
     habitos: {  
-        type: Array,
-        required: false
+        type: String,
+        // required: true
     },
     protesis: {  //si/no
         type: String,
-        required: false
+        // required: true
     },
     // antecedentes de higiene oral
     cepillo: {  
         type: String,
-        required: false
+        // required: true
     },
     hilo: {  
         type: String,
-        required: false
+        // required: true
     },
     enjuague: {  
         type: String,
-        required: false
+        // required: true
     },
     frecuenciaCepillado: {  
         type: String,
-        required: false
+        // required: true
     },
     sangreEncias: {  
         type: String,
-        required: false
+        // required: true
     },
     higieneDental: {  
-        type: Array,
-        required: false
+        type: String,
+        // required: true
     },
     problemaTratamiento: {  
         type: String,
-        required: false
+        // required: true
     },
     //
     observaciones: {  
         type: String,
-        required: false
+        // required: true
     },
     //
     motivoConsulta: {  
         type: String,
-        required: false
+        // required: true
     },
     //
     examenClinico: {  
         type: String,
-        required: false
+        // required: true
     },
     //
     diagnostico: {  
         type: String,
-        required: false
+        // required: true
     },
 });
 

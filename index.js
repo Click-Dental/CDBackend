@@ -4,7 +4,7 @@ const cors = require("cors");
 
 // Creamos el servidor
 const app = express();
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 // Conectamos a la BD
 conectarDB();
 app.use(cors())

@@ -9,5 +9,6 @@ router.get('/', dentistaController.obtenerDentistas);
 router.put('/:id', dentistaController.actualizarDentista);
 router.get('/:id', dentistaController.obtenerDentista);
 router.delete('/:id', dentistaController.eliminarDentista);
+router.put('/asignarPaciente/:id', dentistaController.actualizarDentista);
 
 module.exports = router;

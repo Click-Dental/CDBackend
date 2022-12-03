@@ -100,7 +100,7 @@ PUT http://localhost:4000/api/dentistas/asignarPaciente/6389608316db21bd69ff2ee8
 Content-Type: application/json
 
 {
-  "listaPacientes": "636b4edfa34ffad4427bea65"
+  "listaPacientes": "636bc6e5b59873f29e4c4a85"
 }
 
 //636b4edfa34ffad4427bea65
